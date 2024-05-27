@@ -1,0 +1,55 @@
+header {
+    background-color: var(--headerBackground);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+
+    #logoDiv {
+        width: 10%;
+        padding: .45%;
+        /*border: 1px solid #FF0000;*/
+
+        #logo {
+            /*border: 1px solid #00FF00;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .25%;
+            height: 100%;
+            width: fit-content;
+
+            img {
+                height: 80%;
+            }
+        }
+    }
+
+
+    #timerDiv {
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #timerCircle {
+            background-color: var(--primary);
+            aspect-ratio: 1/1;
+            height: 80%;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-family: oswald;
+                font-size: 2cqw;
+            }
+        }
+    }
+
+    #buttonsDiv {
+        width: 25%;
+        border: 1px solid #FF0000;
+    }
+}
