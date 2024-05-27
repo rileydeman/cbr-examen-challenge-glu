@@ -11,6 +11,8 @@
 
 <!--    Linking of the css files-->
     <link rel="stylesheet" href="./public/assets/css/style.css">
+    <link rel="stylesheet" href="./public/assets/css/header.css">
+    <link rel="stylesheet" href="./public/assets/css/footer.css">
 
 <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="./public/assets/js/app.js"></script>

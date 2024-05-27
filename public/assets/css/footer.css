@@ -1,0 +1,7 @@
+footer {
+    background-color: var(--footerBackground);
+
+    p {
+        color: #FFFFFF;
+    }
+}
