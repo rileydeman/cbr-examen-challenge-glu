@@ -7,3 +7,13 @@
     --primary: #03A9F4;
     --primary-transparent: #03A9F435;
 }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    background-color: var(--footerBackground);
+}

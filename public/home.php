@@ -10,10 +10,10 @@
     <link rel="icon" href="">
 
 <!--    Linking of the css files-->
-    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="./public/assets/css/style.css">
 
 <!--    Linking of the javascript files, defer = reading/link the file at last-->
-    <script defer src="/public/assets/js/app.js"></script>
+    <script defer src="./public/assets/js/app.js"></script>
 </head>
 
 <body>
