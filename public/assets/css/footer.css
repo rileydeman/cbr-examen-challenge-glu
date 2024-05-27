@@ -2,14 +2,27 @@ footer {
     background-color: var(--footerBackground);
     display: flex;
     color: white;
-}
 
-#contactLink {
-    color: #FFFFFF;
-    margin-right: 100px;
-}
+    align-items:center;
+    padding: 10px;
 
-a {
-    color: white;
-    margin-right: 100px;
+    p {
+        margin-right: 100px;
+    }
+    
+    #contactLink {
+        color: #FFFFFF;
+        font-size:25px;
+    }
+    
+    #aboutusLink {
+        color: #FFFFFF;
+        font-size:25px;
+        margin-left: 100px;
+    }
+    
+    a {
+        color: white;
+        margin-right: 100px;
+    }
 }
