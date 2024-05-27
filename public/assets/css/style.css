@@ -1,0 +1,9 @@
+:root {
+    --headerBackground: #25476A;
+    --loginformBackground: #25476A;
+    --menuBackground: #25476A;
+    --footerBackground: #15273b;
+    --footerBackground-transparent: #15273b99;
+    --primary: #03A9F4;
+    --primary-transparent: #03A9F435;
+}
