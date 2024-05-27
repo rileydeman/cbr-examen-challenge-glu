@@ -1,7 +1,19 @@
 footer {
     background-color: var(--footerBackground);
+    display: flex;
+    color: white;
+}
 
-    p {
-        color: #FFFFFF;
-    }
+p {
+    margin-right: 100px;
+}
+
+#contactLink {
+    color: #FFFFFF;
+    margin-right: 100px;
+}
+
+a {
+    color: white;
+    margin-right: 100px;
 }
