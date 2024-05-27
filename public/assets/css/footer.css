@@ -5,23 +5,24 @@ footer {
 
     align-items:center;
     padding: 10px;
-}
 
-p {
-    margin-right: 100px;
-}
-
-#contactLink {
-    color: #FFFFFF;
-    font-size:25px;
-}
-
-#aboutusLink {
-    color: #FFFFFF;
-    font-size:25px;
-}
-
-a {
-    color: white;
-    margin-right: 100px;
+    p {
+        margin-right: 100px;
+    }
+    
+    #contactLink {
+        color: #FFFFFF;
+        font-size:25px;
+    }
+    
+    #aboutusLink {
+        color: #FFFFFF;
+        font-size:25px;
+        margin-left: 100px;
+    }
+    
+    a {
+        color: white;
+        margin-right: 100px;
+    }
 }
