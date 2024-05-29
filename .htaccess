@@ -3,5 +3,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f
 
 RewriteRule ^(.*)$ public/$1.php
+RewriteRule ^gevaarherkenning$ public/gevaarherkenning.php
+RewriteRule ^kennis$ public/kennis.php
+RewriteRule ^inzicht$ public/inzicht.php
 
 ErrorDocument 404 /public/core/errors/404.php
