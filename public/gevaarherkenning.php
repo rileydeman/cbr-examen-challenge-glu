@@ -39,6 +39,8 @@
                     <img id="quizPicture" src="./public/assets/img/placeholder.png">
                 </div>
                 <div id="choicesBox">
+
+                
                     <div class="options">
                         <div class="option">1.</div>
                         <div class="optionTekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis minus id
