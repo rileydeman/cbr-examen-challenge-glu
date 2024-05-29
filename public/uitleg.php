@@ -6,7 +6,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HOME | CBR examen rijbewijs B</title>
+    <title>Uitleg | CBR examen rijbewijs B</title>
 
     <link rel="icon" href="">
 
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./public/assets/css/style.css">
     <link rel="stylesheet" href="./public/assets/css/header.css">
     <link rel="stylesheet" href="./public/assets/css/footer.css">
-    <link rel="stylesheet" href="./public/assets/css/home.css">
+    <link rel="stylesheet" href="./public/assets/css/uitleg.css">
 
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="./public/assets/js/app.js"></script>
@@ -26,31 +26,23 @@
 
     <header>
         <!--    Getting the header document-->
-        <?php include "public/core/header.php" ?>
+        <?php include "core/header.php" ?>
     </header>
 
     <main>
-        <form action="" target="_self" method="post" id="startForm">
-            <img id="cbrLogo" src="./public/assets/img/cbr-logo.png" alt="">
-            <h1>theorie examen rijbewijs B (auto)</h1>
-            <p>Welkom bij uw rijbewijs B theorie examen, vul hieronder uw gegevens in en klik daarna op "Start Examen".</p>
-
-            <div id="inputFields">
-                <div class="inputItem">
-                    <p>Naam</p>
-                    <input id="nameinput" type="text" name="name" placeholder="Vul hier uw voor en achternaam in">
-                </div>
-
-                <div id="submitButton">
-                    <p>Start Examen</p>
+        <div id="bigBoyParentContainer">
+            <div id="contentBox1">
+                <img id="fillerImage" src="./public/assets/img/lachendmeisje.png">
+                <div id="textBox1">
+                    <p class="containerText">Leuk dat je je rijbewijs wilt gaan halen! Om te voldoen aan de nationaal wettelijke eisen, moet je slagen in 3 vakgebieden: gevaarherkenning, kennis en inzicht.</p>
                 </div>
             </div>
-        </form>
+        </div>
     </main>
 
     <footer>
         <!--    Getting the footer document-->
-        <?php include "public/core/footer.php" ?>
+        <?php include "core/footer.php" ?>
     </footer>
 
 </body>

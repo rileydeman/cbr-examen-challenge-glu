@@ -1,0 +1,59 @@
+#quizPicture {
+  object-fit:cover;
+  width: 600px;
+  height: 400px;  
+}
+
+#quizBox {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#pictureBox {
+    margin-right: 300px;
+}
+
+#choicesBox {
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.options {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    font-size: 30px;
+}
+
+.option {
+    background-color: grey;
+    width:50px;
+    height:50px;
+    color: white;
+    font-weight: bold;
+}
+
+.optionTekst {
+    display: flex;
+    background-color: rgb(179, 179, 179);
+    width: 700px;
+    height: 50px;
+    color: white;
+    font-size:18px;
+    align-items: center;
+}
+
+
+#deRest {
+    display: flex;
+    flex-direction: row;
+}
+
+#questionBox {
+    width: auto;
+    height: 75px;
+    font-weight: bold;
+    font-size: 30px;
+}
