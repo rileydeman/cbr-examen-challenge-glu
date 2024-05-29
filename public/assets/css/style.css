@@ -17,3 +17,11 @@
 p {
     font-family: lato;
 }
+
+body {
+    overflow: hidden;
+}
+
+main {
+    height: 75vh;
+}

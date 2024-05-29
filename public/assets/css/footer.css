@@ -2,6 +2,7 @@ footer {
     background-color: var(--footerBackground);
     display: flex;
     color: white;
+    height: 15vh;
 
     align-items:center;
     padding: 10px;
