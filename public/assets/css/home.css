@@ -1,17 +1,62 @@
-
-#startTestContainer {
+main {
     display: flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-}
+    justify-content: center;
+    align-items: center;
 
-img#startButton {
-    width:150px;
-    height:150px;
-    object-fit:contain;
-}
+    form {
+        padding: .5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-#startTestTekst {
-    font-size: 25px;
+        width: 50%;
+
+        #cbrLogo {
+            width: 25%;
+            margin-bottom: 5%;
+        }
+
+        #inputFields {
+            width: 75%;
+            margin-top: 5%;
+
+            .inputItem {
+                margin: 1.5% 0;
+
+                p {
+                    font-family: oswald;
+                    margin-bottom: 1%;
+                    font-size: 1.15cqw;
+                }
+
+                input {
+                    outline: none;
+                    padding: .75% 1%;
+                    font-family: lato;
+                    width: 100%;
+                    border: 2px solid var(--primary);
+                }
+            }
+
+            #submitButton {
+                margin-top: 3%;
+                background-color: var(--primary);
+                padding: .75%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 3px solid var(--primary);
+
+                p {
+                    font-family: oswald;
+                    font-size: 1.25cqw;
+                }
+
+                &:hover {
+                    border: 3px solid var(--footerBackground);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }

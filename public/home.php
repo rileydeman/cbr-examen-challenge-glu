@@ -19,6 +19,7 @@
 
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="./public/assets/js/app.js"></script>
+    <script defer src="./public/assets/js/home.js"></script>
 </head>
 
 <body>
@@ -29,12 +30,22 @@
     </header>
 
     <main>
-        <div id="startTestContainer">
-            <p id="startTestTekst">START TEST</p>
-            <a href="public/test.php">
-                <img id="startButton" src="./public/assets/img/video.png">
-            </a>
-        </div>
+        <form action="" target="_self" method="post" id="startForm">
+            <img id="cbrLogo" src="/public/assets/img/cbr-logo.png" alt="">
+            <h1>theorie examen rijbewijs B (auto)</h1>
+            <p>Welkom bij uw rijbewijs B theorie examen, vul hieronder uw gegevens in en klik daarna op "Start Examen".</p>
+
+            <div id="inputFields">
+                <div class="inputItem">
+                    <p>Naam</p>
+                    <input id="nameinput" type="text" name="name" placeholder="Vul hier uw voor en achternaam in">
+                </div>
+
+                <div id="submitButton">
+                    <p>Start Examen</p>
+                </div>
+            </div>
+        </form>
     </main>
 
     <footer>
