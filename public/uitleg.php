@@ -48,7 +48,7 @@ $name = $_SESSION["exam"]['user'];
                     Goedendag <span class="important-word"><?= $name ?></span>! <br><br> Leuk dat je je <span class="important-word">RIJBEWIJS</span> wilt gaan halen! Om te voldoen aan de <span class="important-word">NATIONAAL WETTELIJKE EISEN</span>, moet je slagen in 3 vakgebieden: <span class="important-word">GEVAARHERKENNING</span>, <span class="important-word">KENNIS</span> en <span class="important-word">INZICHT</span>.
                 </p>
                 <hr id="separatorLine" style="display: none;"/>
-                <p id="additionalText" class="containerText" style="display: none;">
+                < id="additionalText" class="containerText" style="display: none;">
                     Bij <span class="important-word">GEVAARHERKENNING</span> moet je altijd kiezen tussen 3 keuzes: gas inhouden, remmen of stoppen. Bij de <span class="important-word">KENNISVRAGEN</span> is het de vraag of het <span class="important-word">WAAR</span> of <span class="important-word">NIET WAAR</span> is. Bij de <span class="important-word">INZICHTSVRAGEN</span> krijg je een scenario en je moet aangeven wat de beste actie is. Je moet alle drie de vakgebieden met een voldoende afronden om je rijbewijs te halen. Lukt dat niet? Dan moet je het examen opnieuw afleggen.
                 </p>
                 <button id="toggleButton" class="arrow-button">▼</button>

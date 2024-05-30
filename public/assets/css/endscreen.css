@@ -1,0 +1,29 @@
+#resultContainer {
+    width:304px;
+    height:304px;
+}
+
+#parentContainer {
+    display: flex;
+}
+
+#div2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#bigBox {
+    width: 1500px;
+    height: 400px;
+    margin-left: -750px;
+    }
+
+    .hvlVragenFout {
+        font-weight: 900;
+        font-size:30px;
+    }
+
+    .important-word, .important-word2, .important-word3 {
+        font-weight:normal;
+        font-size:20px;
+    }
