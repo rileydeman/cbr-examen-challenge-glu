@@ -19,7 +19,7 @@
 
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="./public/assets/js/app.js"></script>
-    <script defer src="./public/assets/js/home.js"></script>
+    <script defer src="./public/assets/js/uitleg.js"></script>
 </head>
 
 <body>
@@ -30,24 +30,40 @@
     </header>
 
     <main>
-        <div id="bigBoyParentContainer">
-            <div id="contentBox1">
-                <img id="fillerImage" src="./public/assets/img/lachendmeisje.png">
-                <div id="textBox1">
-                <p class="containerText">
-    Leuk dat je je <strong>RIJBEWIJS</strong> wilt gaan halen! Om te voldoen aan de <strong>NATIONAAL WETTELIJKE EISEN</strong>, moet je slagen in 3 vakgebieden: <strong>GEVAARHERKENNING</strong>, <strong>KENNIS</strong> en <strong>INZICHT</strong>.
-</p>
-
-                </div>
+    <div id="bigBoyParentContainer">
+        <div id="contentBox1">
+            <img id="fillerImage" src="./public/assets/img/lachendmeisje.png">
+            <div id="textBox1">
+                <p class="containerText" id="initialText">
+                    Leuk dat je je <span class="important-word">RIJBEWIJS</span> wilt gaan halen! Om te voldoen aan de <span class="important-word">NATIONAAL WETTELIJKE EISEN</span>, moet je slagen in 3 vakgebieden: <span class="important-word">GEVAARHERKENNING</span>, <span class="important-word">KENNIS</span> en <span class="important-word">INZICHT</span>.
+                </p>
+                <hr id="separatorLine" style="display: none;"/>
+                <p id="additionalText" class="containerText" style="display: none;">
+                    Bij <span class="important-word">GEVAARHERKENNING</span> moet je altijd kiezen tussen 3 keuzes: gas inhouden, remmen of stoppen. Bij de <span class="important-word">KENNISVRAGEN</span> is het de vraag of het <span class="important-word">WAAR</span> of <span class="important-word">NIET WAAR</span> is. Bij de <span class="important-word">INZICHTSVRAGEN</span> krijg je een scenario en je moet aangeven wat de beste actie is. Je moet alle drie de vakgebieden met een voldoende afronden om je rijbewijs te halen. Lukt dat niet? Dan moet je het examen opnieuw afleggen.
+                </p>
+                <button id="toggleButton" class="arrow-button">▼</button>
             </div>
         </div>
-    </main>
+        <div id="divider"></div>
+        <div id="contentBox2">
+            <img id="fillerImage2" src="./public/assets/img/lachendmeisje2.png">
+            <div id="textBox2">
+                <p class="containerText" id="initialText2">
+                    Klaar met lezen? Klik op de knop en <span class="important-word">START DE TEST!</span>
+                </p>
+                <a href="./home.php">
+                    <img src="./public/assets/img/video.png" style="width:200px;height:200px;object-fit:contain;margin-left:150px;margin-top:50px;">
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
 
     <footer>
         <!--    Getting the footer document-->
         <?php include "core/footer.php" ?>
     </footer>
-
 </body>
 
 </html>
