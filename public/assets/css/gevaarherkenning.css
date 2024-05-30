@@ -25,6 +25,19 @@
     margin-top: 10px;
     flex-direction: row;
     font-size: 30px;
+    border: 2px solid transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.selected {
+    border: 2px solid var(--primary);
 }
 
 .option {
@@ -39,6 +52,7 @@
 }
 
 .optionTekst {
+    padding: 1%;
     display: flex;
     background-color: rgb(179, 179, 179);
     width: 700px;

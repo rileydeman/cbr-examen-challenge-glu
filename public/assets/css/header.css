@@ -5,7 +5,7 @@ header {
     display: flex;
 
     #logoDiv {
-        width: 10%;
+        width: 20%;
         padding: .45%;
         /*border: 1px solid #FF0000;*/
 
@@ -26,7 +26,7 @@ header {
 
 
     #timerDiv {
-        width: 65%;
+        width: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -49,7 +49,7 @@ header {
     }
 
     #buttonsDiv {
-        width: 25%;
+        width: 20%;
         border: 1px solid #FF0000;
     }
 }

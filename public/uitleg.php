@@ -49,7 +49,9 @@ $name = $_SESSION["exam"]['user'];
                 </p>
                 <hr id="separatorLine" style="display: none;"/>
                 <p id="additionalText" class="containerText" style="display: none;">
-                    Bij <span class="important-word">GEVAARHERKENNING</span> moet je altijd kiezen tussen 3 keuzes: gas inhouden, remmen of stoppen. Bij de <span class="important-word">KENNISVRAGEN</span> is het de vraag of het <span class="important-word">WAAR</span> of <span class="important-word">NIET WAAR</span> is. Bij de <span class="important-word">INZICHTSVRAGEN</span> krijg je een scenario en je moet aangeven wat de beste actie is. Je moet alle drie de vakgebieden met een voldoende afronden om je rijbewijs te halen. Lukt dat niet? Dan moet je het examen opnieuw afleggen.
+                    <span class="important-word">- GEVAARHERKENNING:</span> hier mag u maximaal 12 van de 25 fout hebben. <br><br>
+                    <span class="important-word">- KENNIS:</span> hier mag u maximaal 2 van de 12 fout hebben. <br><br>
+                    <span class="important-word"- >INZICHT</span>  hier mag u maximaal 3 van de 28 vragen fout hebben.
                 </p>
                 <button id="toggleButton" class="arrow-button">▼</button>
             </div>
@@ -59,9 +61,9 @@ $name = $_SESSION["exam"]['user'];
             <img id="fillerImage2" src="./public/assets/img/lachendmeisje2.png">
             <div id="textBox2">
                 <p class="containerText" id="initialText2">
-                    Klaar met lezen? Klik op de knop en <span class="important-word">START DE TEST!</span>
+                    Klaar met lezen? Klik op de knop en <br><span class="important-word">START HET EXAMEN!</span>
                 </p>
-                <a href="./home.php">
+                <a href="./gevaarherkenning?q=1">
                     <img src="./public/assets/img/video.png" style="width:200px;height:200px;object-fit:contain;margin-left:150px;margin-top:50px;">
                 </a>
             </div>
