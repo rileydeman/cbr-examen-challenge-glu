@@ -7,5 +7,6 @@ RewriteRule ^gevaarherkenning$ public/gevaarherkenning.php
 RewriteRule ^kennis$ public/kennis.php
 RewriteRule ^inzicht$ public/inzicht.php
 RewriteRule ^uitleg$ public/uitleg.php
+RewriteRule ^endscreen$ public/endscreen.php
 
 ErrorDocument 404 /public/core/errors/404.php
