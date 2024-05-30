@@ -19,3 +19,24 @@ option3.addEventListener("click", () => {
     option2.className = "options";
     option3.className = "options selected";
 })
+
+let timerSec = 8;
+let timerText = document.getElementById("timerText");
+timerText.innerHTML = timerSec;
+
+let form = document.getElementById("choicesBox");
+
+setInterval(timer, 1000)
+
+function timer() {
+    timerSec--;
+    timerText.innerHTML = timerSec;
+
+    if (timerSec == 0) {
+        sendForm();
+    }
+}
+
+function sendForm() {
+    form.submit();
+}

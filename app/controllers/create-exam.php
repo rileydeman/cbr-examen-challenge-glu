@@ -18,7 +18,7 @@ $gevaarherkenning = [];
 
 foreach ($questions as $question) {
 
-        if ($question["category"] == "J") {
+        if ($question["options"][0] == "0" OR $question["options"][0] == "1" OR $question["options"][0] == "2") {
             $rndNum = rand(0, 100);
             $useQuestion = "";
 
