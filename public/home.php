@@ -30,7 +30,7 @@
     </header>
 
     <main>
-        <form action="../app/controllers/create-exam.php" target="_self" method="post" id="startForm">
+        <form action="./app/controllers/create-exam.php" target="_self" method="post" id="startForm">
             <img id="cbrLogo" src="./public/assets/img/cbr-logo.png" alt="">
             <h1>theorie examen rijbewijs B (auto)</h1>
             <p>Welkom bij uw rijbewijs B theorie examen, vul hieronder uw gegevens in en klik daarna op "Start Examen".</p>
