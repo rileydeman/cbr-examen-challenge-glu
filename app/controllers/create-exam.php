@@ -2,8 +2,12 @@
 session_start();
 
 if (!isset($_SESSION["exam"])) {
-    $_SESSION["exam"] = ["gevaarherkenning" => [], "kennis" => [], "inzicht" => []];
+    $_SESSION["exam"] = ["user" => "", "onderdelen" => ["gevaarherkenning" => [], "kennis" => [], "inzicht" => []]];
 }
+
+$_SESSION["exam"] = ["user" => "", "onderdelen" => ["gevaarherkenning" => [], "kennis" => [], "inzicht" => []]];
+
+$_SESSION["exam"]["user"] = testInput($_POST["name"]);
 
 $questions = file_get_contents("../../public/assets/json/questions.json");
 $questions = json_decode(preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $questions), true);
@@ -35,7 +39,7 @@ foreach ($questions as $question) {
 }
 
 $gevaarherkenning = shuffle_assoc($gevaarherkenning);
-$_SESSION["exam"]["gevaarherkenning"] = $gevaarherkenning;
+$_SESSION["exam"]["onderdelen"]["gevaarherkenning"] = $gevaarherkenning;
 
 
 //Kennis
@@ -67,7 +71,7 @@ foreach ($questions as $question) {
 }
 
 $kennis = shuffle_assoc($kennis);
-$_SESSION["exam"]["kennis"] = $kennis;
+$_SESSION["exam"]["onderdelen"]["kennis"] = $kennis;
 
 
 //Kennis
@@ -100,14 +104,11 @@ foreach ($questions as $question) {
 }
 
 $inzicht = shuffle_assoc($inzicht);
-$_SESSION["exam"]["inzicht"] = $inzicht;
+$_SESSION["exam"]["onderdelen"]["inzicht"] = $inzicht;
 
 
 
-echo "<pre>";
-var_dump($_SESSION["exam"]);
-echo "</pre>";
-
+//Functions
 function shuffle_assoc($my_array)
 {
     // Get the keys of the associative array
@@ -132,4 +133,15 @@ function shuffle_assoc($my_array)
     // Return the shuffled associative array
     return $my_array;
 }
+
+function testInput($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+//Exit script
+header("Location: /uitleg");
+exit();
 ?>
