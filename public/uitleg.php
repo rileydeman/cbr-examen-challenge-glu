@@ -34,7 +34,10 @@
             <div id="contentBox1">
                 <img id="fillerImage" src="./public/assets/img/lachendmeisje.png">
                 <div id="textBox1">
-                    <p class="containerText">Leuk dat je je rijbewijs wilt gaan halen! Om te voldoen aan de nationaal wettelijke eisen, moet je slagen in 3 vakgebieden: gevaarherkenning, kennis en inzicht.</p>
+                <p class="containerText">
+    Leuk dat je je <strong>RIJBEWIJS</strong> wilt gaan halen! Om te voldoen aan de <strong>NATIONAAL WETTELIJKE EISEN</strong>, moet je slagen in 3 vakgebieden: <strong>GEVAARHERKENNING</strong>, <strong>KENNIS</strong> en <strong>INZICHT</strong>.
+</p>
+
                 </div>
             </div>
         </div>

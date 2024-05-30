@@ -25,11 +25,17 @@
     border-radius: 5%;
     top: 200px;
     left: 300px;
+    padding: 10px;
 }
 
 .containerText {
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     opacity: 1;
+}
+
+strong {
+    color: black;
+    font-weight: 900;
 }
