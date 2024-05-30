@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["exam"])) {
+    $_SESSION["exam"] = ["user" => "", "onderdelen" => ["gevaarherkenning" => [], "kennis" => [], "inzicht" => []]];
+}
+
+$name = $_SESSION["exam"]['user'];
+?>
+
 <!doctype html>
 <html lang="en-AU">
 
@@ -35,7 +45,7 @@
             <img id="fillerImage" src="./public/assets/img/lachendmeisje.png">
             <div id="textBox1">
                 <p class="containerText" id="initialText">
-                    Leuk dat je je <span class="important-word">RIJBEWIJS</span> wilt gaan halen! Om te voldoen aan de <span class="important-word">NATIONAAL WETTELIJKE EISEN</span>, moet je slagen in 3 vakgebieden: <span class="important-word">GEVAARHERKENNING</span>, <span class="important-word">KENNIS</span> en <span class="important-word">INZICHT</span>.
+                    Goedendag <span class="important-word"><?= $name ?></span>! <br><br> Leuk dat je je <span class="important-word">RIJBEWIJS</span> wilt gaan halen! Om te voldoen aan de <span class="important-word">NATIONAAL WETTELIJKE EISEN</span>, moet je slagen in 3 vakgebieden: <span class="important-word">GEVAARHERKENNING</span>, <span class="important-word">KENNIS</span> en <span class="important-word">INZICHT</span>.
                 </p>
                 <hr id="separatorLine" style="display: none;"/>
                 <p id="additionalText" class="containerText" style="display: none;">
