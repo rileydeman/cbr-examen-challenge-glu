@@ -1,3 +1,17 @@
+<?php
+$q = $_GET["q"] - 1;
+
+session_start();
+
+if (!isset($_SESSION["exam"])) {
+    $_SESSION["exam"] = ["user" => "", "onderdelen" => ["gevaarherkenning" => [], "kennis" => [], "inzicht" => []]];
+}
+
+$name = $_SESSION["exam"]['user'];
+
+$question = $_SESSION["exam"]['onderdelen']['gevaarherkenning'][$q];
+?>
+
 <!doctype html>
 <html lang="en-AU">
 
@@ -19,7 +33,7 @@
 
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="./public/assets/js/app.js"></script>
-    <script defer src="./public/assets/js/home.js"></script>
+    <script defer src="./public/assets/js/gevaarherkenning.js"></script>
 </head>
 
 <body>
@@ -32,28 +46,33 @@
     <main>
         <div id="quizBox">
             <div id="questionBox">
-                <p>Vraag 1: Als je dit bord tegenkomt, wat moet je dan doen?</p>
+                <p><?= $question["question"] ?></p>
             </div>
             <div id="deRest">
                 <div id="pictureBox">
-                    <img id="quizPicture" src="./public/assets/img/placeholder.png">
+                    <img id="quizPicture" src="./public/assets/img/question-images/<?= $question["image"] ?>">
                 </div>
-                <div id="choicesBox">
+                <form action="../app/controllers/progress-gevaarherkenning-question.php" method="post" id="choicesBox">
 
-                
-                    <div class="options">
+                    <label for="option1radio" class="options" id="option1">
                         <div class="option">1.</div>
                         <div class="optionTekst">Remmen</div>
-                    </div>
-                    <div class="options">
+                        <input type="radio" name="answer" id="option1radio" value="0">
+                    </label>
+                    <label for="option2radio" class="options" id="option2">
                         <div class="option">2.</div>
-                        <div class="optionTekst">Gas los</div>
-                    </div>
-                    <div class="options">
+                        <div class="optionTekst">Gas loslaten</div>
+                        <input type="radio" name="answer" id="option2radio" value="1">
+                    </label>
+                    <label for="option3radio" class="options" id="option3">
                         <div class="option">3.</div>
                         <div class="optionTekst">Niets</div>
-                    </div>
-                </div>
+                        <input type="radio" name="answer" id="option3radio" value="2">
+                    </label>
+
+                    <input type="hidden" name="questionNumber" value="<?= $q ?>">
+
+                </form>
             </div>
         </div>
     </main>
