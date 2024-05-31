@@ -40,3 +40,9 @@ function timer() {
 function sendForm() {
     form.submit();
 }
+
+let nextIcon = document.getElementById("nextIcon");
+
+nextIcon.addEventListener("click", (e) => {
+    sendForm();
+})

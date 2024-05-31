@@ -50,6 +50,6 @@ header {
 
     #buttonsDiv {
         width: 20%;
-        border: 1px solid #FF0000;
+        /*border: 1px solid #FF0000;*/
     }
 }

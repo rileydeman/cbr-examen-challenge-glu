@@ -1,31 +1,23 @@
 #quizPicture {
     object-fit:cover;
     width: 600px;
-    height: 400px;  
-  }
-  
-  #quizBox {
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-  }
-
-  p{
-    font-weight: bold;
-    font-size:20px;
-  }
-
-  #deRest {
-    display: flex;
-    flex-direction: row;
+    height: 400px;
 }
 
-#questionBox {
-    width: auto;
-    height: 50px;
-    font-weight: bold;
-    font-size: 30px;
+#quizBox {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#pictureBox {
+    margin-right: 300px;
+}
+
+#choicesBox {
+    margin-top: 50px;
+    flex-direction: column;
 }
 
 .options {
@@ -63,22 +55,22 @@
     padding: 1%;
     display: flex;
     background-color: rgb(179, 179, 179);
-    width: 500px;
+    width: 700px;
     height: 50px;
     color: white;
     font-size:18px;
     align-items: center;
 }
 
-#answersBox {
+
+#deRest {
     display: flex;
     flex-direction: row;
 }
 
-form {
-    display: flex;
-}
-
-label {
-    margin: 10px;
+#questionBox {
+    width: auto;
+    height: 75px;
+    font-weight: bold;
+    font-size: 30px;
 }

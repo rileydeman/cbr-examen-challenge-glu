@@ -13,9 +13,9 @@ if (isset($_POST["answer"])) {
 
 $questionNumber = testInput($_POST["questionNumber"]);
 
-$_SESSION["exam"]["antwoorden"]["gevaarherkenning"][$questionNumber] = $answer;
+$_SESSION["exam"]["antwoorden"]["kennis"][$questionNumber] = $answer;
 
-//echo $_SESSION["exam"]["antwoorden"][$questionNumber];
+//echo $_SESSION["exam"]["kennis"][$questionNumber];
 
 function testInput($data) {
     $data = trim($data);
@@ -28,9 +28,9 @@ function testInput($data) {
 $nexQuestion = $_POST["questionNumber"] + 2;
 
 if ($nexQuestion <= 25) {
-    header("Location: ../../gevaarherkenning?q=" . $nexQuestion);
+    header("Location: ../../kennis?q=" . $nexQuestion);
 } else {
-    header("Location: ../../kennis?q=1");
+    header("Location: ../../inzicht?q=1");
 }
 
 exit();
