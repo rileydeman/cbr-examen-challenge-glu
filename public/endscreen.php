@@ -126,14 +126,14 @@ for ($i = 0; $i < count($_SESSION["exam"]["antwoorden"]["inzicht"]); $i++) {
                     ?>
                     <style>
                         .important-word {
-                            color: red;
+                            color: green;
                         }
                     </style> <?php
                 } else if ($vragenFout > 3) {
                     ?>
                         <style>
                             .important-word {
-                                color: green;
+                                color: red;
                             }
                         </style> <?php
                 }
@@ -142,14 +142,14 @@ for ($i = 0; $i < count($_SESSION["exam"]["antwoorden"]["inzicht"]); $i++) {
                     ?>
                     <style>
                         .important-word2 {
-                            color: red;
+                            color: green;
                         }
                     </style> <?php
                 } else if ($vragenFout2 > 3) {
                     ?>
                         <style>
                             .important-word2 {
-                                color: green;
+                                color: red;
                             }
                         </style> <?php
                 }
@@ -158,14 +158,14 @@ for ($i = 0; $i < count($_SESSION["exam"]["antwoorden"]["inzicht"]); $i++) {
                     ?>
                     <style>
                         .important-word3 {
-                            color: red;
+                            color: green;
                         }
                     </style> <?php
                 } else if ($vragenFout3 > 3) {
                     ?>
                         <style>
                             .important-word3 {
-                                color: green;
+                                color: red;
                             }
                         </style> <?php
                 }
