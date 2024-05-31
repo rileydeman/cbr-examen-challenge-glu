@@ -1,3 +1,39 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION["exam"])) {
+    $_SESSION["exam"] = ["user" => "", "onderdelen" => ["gevaarherkenning" => [], "kennis" => [], "inzicht" => []]];
+}
+
+//gevaarherkenning
+$gevaarherkenningIncorrect = 0;
+
+for ($i = 0; $i < count($_SESSION["exam"]["antwoorden"]["gevaarherkenning"]); $i++) {
+    if ($_SESSION["exam"]["antwoorden"]["gevaarherkenning"][$i] != $_SESSION["exam"]["onderdelen"]["gevaarherkenning"][$i]["options"][0]) {
+        $gevaarherkenningIncorrect++;
+    }
+}
+
+//kennis
+$kennisIncorrect = 0;
+
+for ($i = 0; $i < count($_SESSION["exam"]["antwoorden"]["kennis"]); $i++) {
+    if ($_SESSION["exam"]["antwoorden"]["kennis"][$i] != $_SESSION["exam"]["onderdelen"]["kennis"][$i]["options"][0]) {
+        $kennisIncorrect++;
+    }
+}
+
+//inzicht
+$inzichtIncorrect = 0;
+
+for ($i = 0; $i < count($_SESSION["exam"]["antwoorden"]["inzicht"]); $i++) {
+    if ($_SESSION["exam"]["antwoorden"]["inzicht"][$i] != $_SESSION["exam"]["onderdelen"]["inzicht"][$i]["options"][0]) {
+        $inzichtIncorrect++;
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en-AU">
 
@@ -37,10 +73,12 @@
                     <?php
                     //vervang al deze variables met je eigen shit
                     $testVariable = false; // Ben je geslaagd of niet? true = geslaagd, false = gefaald
-                    $vragenTotaal = 28; // totaal aantal vragen (maak 3 variables per vakgebied, of doe het lekker zoals jij het wilt)
-                    $vragenFout = 3; // Aantal vragen fout van gevaarsherkenning
-                    $vragenFout2 = 5; // Aantal vragen fout van Kennis
-                    $vragenFout3 = 2; // Aantal vragen fout van Kennis
+                    $vragenTotaal = 25; // totaal aantal vragen (maak 3 variables per vakgebied, of doe het lekker zoals jij het wilt)
+                    $vragenTotaal2 = 12;
+                    $vragenTotaal3 = 28;
+                    $vragenFout = $gevaarherkenningIncorrect; // Aantal vragen fout van gevaarsherkenning
+                    $vragenFout2 = $kennisIncorrect; // Aantal vragen fout van Kennis
+                    $vragenFout3 = $inzichtIncorrect; // Aantal vragen fout van Kennis
                     
 
                     // Alles wat deze if statements doen is de kleuren veranderen. Als ie false is, wordt alles rood, duimpje omlaag
@@ -139,10 +177,10 @@
                         class="important-word"><?= $vragenFout . " van de " . $vragenTotaal . " fout." ?></span>
                 </p>
                 <p class="hvlVragenFout">Kennis: <span
-                        class="important-word2"><?= $vragenFout2 . " van de " . $vragenTotaal . " fout." ?></span>
+                        class="important-word2"><?= $vragenFout2 . " van de " . $vragenTotaal2 . " fout." ?></span>
                 </p>
                 <p class="hvlVragenFout">Inzicht: <span
-                        class="important-word3"><?= $vragenFout3 . " van de " . $vragenTotaal . " fout." ?></span>
+                        class="important-word3"><?= $vragenFout3 . " van de " . $vragenTotaal3 . " fout." ?></span>
                 </p>
                 <br>
                 <br>
