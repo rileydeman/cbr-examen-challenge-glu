@@ -42,8 +42,7 @@ function shuffle_assoc($my_array)
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inzicht | CBR examen rijbewijs B</title>
 
@@ -63,50 +62,51 @@ function shuffle_assoc($my_array)
 
 <body>
 
-<header>
-    <!--    Getting the header document-->
-    <?php include "core/header.php" ?>
-</header>
+    <header>
+        <!--    Getting the header document-->
+        <?php include "core/header.php" ?>
+    </header>
 
-<main>
-    <div id="quizBox">
-        <div id="questionBox">
-            <p><?= $question["question"] ?></p>
-        </div>
-        <div id="deRest">
-            <div id="pictureBox">
-                <img id="quizPicture" src="./public/assets/img/question-images/<?= $question["image"] ?>">
+    <main>
+        <div id="quizBox">
+            <div id="questionBox">
+                <p><?= $question["question"] ?></p>
             </div>
-            <form action="../app/controllers/progress-inzicht-question.php" method="post" id="choicesBox">
+            <div id="deRest">
+                <div id="pictureBox">
+                    <img id="quizPicture" src="./public/assets/img/question-images/<?= $question["image"] ?>">
+                </div>
+                <form action="../app/controllers/progress-inzicht-question.php" method="post" id="choicesBox">
 
-                <?php
-                $options = shuffle_assoc($question["options"]);
-                $optionNum = 0;
+                    <?php
+                    $options = shuffle_assoc($question["options"]);
+                    $optionNum = 0;
 
-                foreach ($options as $option) {
-                    if ($option != "") {
-                        $optionNum++;
-                        ?>
+                    foreach ($options as $option) {
+                        if ($option != "") {
+                            $optionNum++;
+                    ?>
 
-                        <label for="<?= $optionNum ?>radio" class="options" id="option<?= $optionNum ?>">
-                            <div class="option"><?= $optionNum ?></div>
-                            <div class="optionTekst"><?= $option ?></div>
-                            <input type="radio" name="answer" id="<?= $optionNum ?>radio" value="<?= $option ?>">
-                        </label>
+                            <label for="<?= $optionNum ?>radio" class="options" id="option<?= $optionNum ?>">
+                                <div class="option"><?= $optionNum ?></div>
+                                <div class="optionTekst"><?= $option ?></div>
+                                <input type="radio" name="answer" id="<?= $optionNum ?>radio" value="<?= $option ?>">
+                            </label>
 
-                    <?php }} ?>
+                    <?php }
+                    } ?>
 
-                <input type="hidden" name="questionNumber" value="<?= $q ?>">
+                    <input type="hidden" name="questionNumber" value="<?= $q ?>">
 
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<footer>
-    <!--    Getting the footer document-->
-    <?php include "core/footer.php" ?>
-</footer>
+    <footer>
+        <!--    Getting the footer document-->
+        <?php include "core/footer.php" ?>
+    </footer>
 
 </body>
 

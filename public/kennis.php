@@ -42,8 +42,7 @@ function shuffle_assoc($my_array)
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kennis | CBR examen rijbewijs B</title>
 
@@ -88,13 +87,14 @@ function shuffle_assoc($my_array)
                             $optionNum++;
                     ?>
 
-                    <label for="<?= $optionNum ?>radio" class="options" id="option<?= $optionNum ?>">
-                        <div class="option"><?= $optionNum ?></div>
-                        <div class="optionTekst"><?= $option ?></div>
-                        <input type="radio" name="answer" id="<?= $optionNum ?>radio" value="<?= $option ?>">
-                    </label>
+                            <label for="<?= $optionNum ?>radio" class="options" id="option<?= $optionNum ?>">
+                                <div class="option"><?= $optionNum ?></div>
+                                <div class="optionTekst"><?= $option ?></div>
+                                <input type="radio" name="answer" id="<?= $optionNum ?>radio" value="<?= $option ?>">
+                            </label>
 
-                    <?php }} ?>
+                    <?php }
+                    } ?>
 
                     <input type="hidden" name="questionNumber" value="<?= $q ?>">
 
