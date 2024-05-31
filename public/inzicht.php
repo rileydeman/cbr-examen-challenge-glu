@@ -1,3 +1,42 @@
+<?php
+$q = $_GET["q"] - 1;
+
+session_start();
+
+if (!isset($_SESSION["exam"])) {
+    $_SESSION["exam"] = ["user" => "", "onderdelen" => ["gevaarherkenning" => [], "kennis" => [], "inzicht" => []]];
+}
+
+$name = $_SESSION["exam"]['user'];
+
+$question = $_SESSION["exam"]['onderdelen']['inzicht'][$q];
+
+function shuffle_assoc($my_array)
+{
+    // Get the keys of the associative array
+    $keys = array_keys($my_array);
+
+    // Shuffle the keys
+    shuffle($keys);
+
+    // Initialize an empty array to store the shuffled associative array
+    $new = array();
+
+    // Iterate through the shuffled keys
+    foreach ($keys as $key) {
+        // Assign each key-value pair to the new array in shuffled order
+        //$new[$key] = $my_array[$key];
+        array_push($new, $my_array[$key]);
+    }
+
+    // Update the original array with the shuffled result
+    $my_array = $new;
+
+    // Return the shuffled associative array
+    return $my_array;
+}
+?>
+
 <!doctype html>
 <html lang="en-AU">
 
@@ -19,7 +58,7 @@
 
     <!--    Linking of the javascript files, defer = reading/link the file at last-->
     <script defer src="./public/assets/js/app.js"></script>
-    <script defer src="./public/assets/js/home.js"></script>
+    <script defer src="./public/assets/js/inzicht.js"></script>
 </head>
 
 <body>
@@ -30,7 +69,38 @@
 </header>
 
 <main>
-    <h1>Inzicht</h1>
+    <div id="quizBox">
+        <div id="questionBox">
+            <p><?= $question["question"] ?></p>
+        </div>
+        <div id="deRest">
+            <div id="pictureBox">
+                <img id="quizPicture" src="./public/assets/img/question-images/<?= $question["image"] ?>">
+            </div>
+            <form action="../app/controllers/progress-inzicht-question.php" method="post" id="choicesBox">
+
+                <?php
+                $options = shuffle_assoc($question["options"]);
+                $optionNum = 0;
+
+                foreach ($options as $option) {
+                    if ($option != "") {
+                        $optionNum++;
+                        ?>
+
+                        <label for="<?= $optionNum ?>radio" class="options" id="option<?= $optionNum ?>">
+                            <div class="option"><?= $optionNum ?></div>
+                            <div class="optionTekst"><?= $option ?></div>
+                            <input type="radio" name="answer" id="<?= $optionNum ?>radio" value="<?= $option ?>">
+                        </label>
+
+                    <?php }} ?>
+
+                <input type="hidden" name="questionNumber" value="<?= $q ?>">
+
+            </form>
+        </div>
+    </div>
 </main>
 
 <footer>
