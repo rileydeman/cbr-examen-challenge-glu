@@ -8,5 +8,6 @@ RewriteRule ^kennis$ public/kennis.php
 RewriteRule ^inzicht$ public/inzicht.php
 RewriteRule ^uitleg$ public/uitleg.php
 RewriteRule ^endscreen$ public/endscreen.php
+RewriteRule ^hardcode$ public/gevaarherkenning_hardcode.php
 
 ErrorDocument 404 /public/core/errors/404.php
